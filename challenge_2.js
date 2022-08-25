@@ -25,10 +25,9 @@ const checkTypeNumber = (givenNumber) => {
   }
 };
 
-console.log(checkTypeNumber('1'));
-console.log(checkTypeNumber(1));
-console.log(checkTypeNumber(2));
-console.log(checkTypeNumber(2.4));
+console.log(checkTypeNumber(10));
+console.log(checkTypeNumber(3));
+console.log(checkTypeNumber('3'));
 console.log(checkTypeNumber({}));
 console.log(checkTypeNumber([]));
 console.log(checkTypeNumber());
