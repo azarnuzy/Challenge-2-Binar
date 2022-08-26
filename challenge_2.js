@@ -35,24 +35,21 @@ console.log(checkTypeNumber());
 console.log('==========');
 console.log('NUMBER 3');
 const checkEmail = (email) => {
-  const validateEmailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
-  const errorString = /[\w+-\.]+/g;
-
   if (email == null) {
     return `Error: Enter an email`;
-  }
-
-  if (typeof email !== 'string') {
-    return `ERROR ${email} must be string and valid address`;
-  }
-
-  if (validateEmailRegex) {
-    if (errorString) {
-      return `Error: ${email} is an invalid email address`;
-    }
-    return 'VALID';
+  } else if (typeof email !== 'string') {
+    return `'ERROR: ${email}' must be string and valid email address`;
   } else {
-    return 'INVALID';
+    const validateEmailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+    const errorString = /^[\w+-\.]+$/g;
+    if (email.match(validateEmailRegex)) {
+      return 'VALID';
+    } else {
+      if (email.match(errorString)) {
+        return `Error: ${email} is an invalid email address`;
+      }
+      return 'INVALID';
+    }
   }
 };
 
