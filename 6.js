@@ -1,6 +1,6 @@
 const getAngkaTerbesarKedua = (arrAngka) => {
   if (arrAngka == null) {
-    return 'ERROR: Enter numbers of array';
+    return 'ERROR: Enter array of numbers';
   } else if (!Array.isArray(arrAngka)) {
     return 'ERROR: Input must be array';
   } else {
