@@ -38,7 +38,7 @@ const checkEmail = (email) => {
   if (email == null) {
     return `Error: Enter an email`;
   } else if (typeof email !== 'string') {
-    return `'ERROR: ${email}' must be string and valid email address`;
+    return `ERROR: '${email}' must be string and valid email address`;
   } else {
     const validateEmailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
     const errorString = /^[\w+-\.]+$/g;
@@ -59,6 +59,27 @@ console.log(checkEmail('apranata@binar'));
 console.log(checkEmail('apranata'));
 console.log(checkEmail(3221));
 console.log(checkEmail());
+
+console.log('==========');
+console.log('NUMBER 4');
+const isiValidPassword = (password) => {
+  if (password == null) {
+    return 'ERROR: Enter a password';
+  } else if (typeof password !== 'string') {
+    return `'ERROR: '${password}' must be string and valid password`;
+  } else {
+    const passCheckRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/g;
+
+    return password.match(passCheckRegex) ? true : false;
+  }
+};
+
+console.log(isiValidPassword('Meong2021'));
+console.log(isiValidPassword('meong2021'));
+console.log(isiValidPassword('@eong'));
+console.log(isiValidPassword('Meong2'));
+console.log(isiValidPassword(0));
+console.log(isiValidPassword());
 
 console.log('==========');
 console.log('NUMBER 5');
