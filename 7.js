@@ -29,7 +29,7 @@ const hitungTotalPenjualan = (dataPenjualan) => {
   if (dataPenjualan == null) {
     return 'ERROR: please input the data first!';
   } else if (typeof dataPenjualan !== 'object') {
-    return 'ERROR: input must be object of array';
+    return 'ERROR: input must be array of object';
   } else {
     let totalsTerjual = 0;
     dataPenjualan.forEach((data) => {
